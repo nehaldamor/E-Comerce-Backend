@@ -3,7 +3,7 @@ const {body,param}=require('express-validator')
 const router=express.Router();
 
 const categoryController=require('../controllers/category.controller');
-const authMiddleware=require('../middlewares/auth.middlewares');
+const authMiddleware=require('../middlewares/auth.middleware');
 
 router.post('/add',authMiddleware.authAdmin,[
         body('name').notEmpty().withMessage('Category name is required'),

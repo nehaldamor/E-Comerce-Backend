@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const authMiddleware=require("../middlewares/auth.middlewares")
+const authMiddleware=require("../middlewares/auth.middleware")
 const productController=require("../controllers/product.controller")
 const { body, param } = require('express-validator');
 router.post('/add',authMiddleware.authAdmin,[
